@@ -133,7 +133,7 @@ sa_app_process_chirp(
     offset = SU_C_ARG(data[i] * SU_C_CONJ(prev)) / (2 * M_PI) * fs;
 
     /* Convert it to m/s */
-    this_doppler = SPEED_OF_LIGHT * offset / GRAVES_CENTER_FREQ;
+    this_doppler = .5 * SPEED_OF_LIGHT * offset / GRAVES_CENTER_FREQ;
 
     doppler_sum += this_doppler;
     doppler[i] = this_doppler;
